@@ -141,7 +141,20 @@
 .currency-change {
     font-size: 0.95em;
     margin-top: 2px;
-     white-space: nowrap;   
+    white-space: nowrap;   
     overflow: hidden;         
     text-overflow: ellipsis;
+}
+
+.popular-cross-table th:first-child,
+.popular-cross-table td:first-child {
+    text-align: left;
+}
+.popular-cross-table th:nth-child(2),
+.popular-cross-table td:nth-child(2) {
+    text-align: center;
+}
+.popular-cross-table th:last-child,
+.popular-cross-table td:last-child {
+    text-align: right;
 }

@@ -67,7 +67,7 @@
 }
 
 .last-update-text {
-    font-size: 0.85rem;
+    font-size: 1rem;
     color: #888;
 }
 .live-currency {
@@ -157,4 +157,14 @@
 .popular-cross-table th:last-child,
 .popular-cross-table td:last-child {
     text-align: right;
+}
+.base-currency {
+    width: 50%;
+    font-size: 0.85rem;
+    color: #888;
+}
+#base-currency {
+    background-color: rgb(236, 236, 236);
+    width: 100%;
+    padding: 10px;
 }

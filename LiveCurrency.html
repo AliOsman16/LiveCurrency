@@ -21,37 +21,35 @@
                 <div class="card mt-4">
                     <div class="card-header">Döviz Hesaplayıcı</div> 
                         <div class="card-body">
-                        <form id="currency-form">
-                            <div class="mb-3">
-                                <label for="amount" class="form-label">Miktar</label>
-                                <input type="number" class="form-control" id="amount" placeholder="Miktar girin" required>
-                            </div>
-                            <div class="currency">
+                            <form id="currency-form">
                                 <div class="mb-3">
-                                    <label for="from-currency" class="form-label">Kaynak Para Birimi</label>
-                                    <select class="form-select" id="from-currency" style="background-color: rgb(236, 236, 236);" required>
-                                        <!-- dinamik olarak eklenecek -->
-                                        <option value="USD">Amerikan Doları (USD)</option>
-                                        <option value="EUR">Euro (EUR)</option>
-                                        <option value="TRY">Türk Lirası (TRY)</option>
-                                    </select>
+                                    <label for="amount" class="form-label">Miktar</label>
+                                    <input type="number" class="form-control" id="amount" placeholder="Miktar girin" required>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="to-currency" class="form-label">Hedef Para Birimi</label>
-                                    <select class="form-select" id="to-currency" style="background-color: rgb(236, 236, 236);" required>
-                                        <!-- dinamik olarak eklenecek -->
-                                        <option value="USD">Amerikan Doları (USD)</option>
-                                        <option value="EUR">Euro (EUR)</option>
-                                        <option value="TRY">Türk Lirası (TRY)</option>
-                                    </select>
+                                <div class="currency">
+                                    <div class="mb-3">
+                                        <label for="from-currency" class="form-label">Kaynak Para Birimi</label>
+                                        <select class="form-select" id="from-currency" style="background-color: rgb(236, 236, 236);" required>
+                                            <option selected value="USD">Amerikan Doları (USD)</option>
+                                            <option value="EUR">Euro (EUR)</option>
+                                            <option value="TRY">Türk Lirası (TRY)</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="to-currency" class="form-label">Hedef Para Birimi</label>
+                                        <select class="form-select" id="to-currency" style="background-color: rgb(236, 236, 236);" required>
+                                            <option value="USD">Amerikan Doları (USD)</option>
+                                            <option value="EUR">Euro (EUR)</option>
+                                            <option selected value="TRY">Türk Lirası (TRY)</option>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <button id="submit" type="submit" class="btn btn-primary w-100">Hesapla</button>
-                        </form>
-                        <div class="result mt-3">
-                            <h5>1 TRY = <span class="font-weight-bold text-primary">0,03 USD</span></h5>
-                                <small class="text-muted">1 TRY = 0.0329 USD (Örnek Veri)</small>
-                        </div>     
+                                <button id="submit-button" type="submit" class="btn btn-primary w-100">Hesapla</button>
+                            </form>
+                            <div class="result mt-3">
+                                <h5>0 TRY = <span class="font-weight-bold text-primary">0,00 USD</span></h5>
+                                    <small class="text-muted">0 TRY = 0.0 USD </small>
+                            </div>     
                     </div>
                 </div>
                 <div class="card mt-4">
@@ -196,7 +194,7 @@
 
 
 
-
+    <script src="currency.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

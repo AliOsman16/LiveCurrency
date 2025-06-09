@@ -93,10 +93,14 @@ LiveCurrency/
 - 24 saatlik değişim yüzdeleri
 - Otomatik güncelleme
 
-##💡 Geliştirme Fikirleri
+## 💡 Geliştirme Fikirleri
+
   🌐 Daha fazla döviz ekleyerek genişletme
+  
   📈 Grafikler ekleyerek trend takibi
+  
   🕒 Ayarlanabilir yenileme aralığı
+  
   🌓 Koyu / Açık tema seçimi
 
 ## 🤝 Katkıda Bulunma

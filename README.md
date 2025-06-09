@@ -95,14 +95,11 @@ LiveCurrency/
 
 ## 💡 Geliştirme Fikirleri
 
-  🌐 Daha fazla döviz ekleyerek genişletme
+  - 🌐 Daha fazla döviz ekleyerek genişletme
+  - 📈 Grafikler ekleyerek trend takibi
+  - 🕒 Ayarlanabilir yenileme aralığı
+  - 🌓 Koyu / Açık tema seçimi
   
-  📈 Grafikler ekleyerek trend takibi
-  
-  🕒 Ayarlanabilir yenileme aralığı
-  
-  🌓 Koyu / Açık tema seçimi
-
 ## 🤝 Katkıda Bulunma
 
 1. Bu depoyu fork edin

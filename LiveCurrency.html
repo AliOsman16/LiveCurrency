@@ -29,19 +29,11 @@
                                 <div class="currency">
                                     <div class="mb-3">
                                         <label for="from-currency" class="form-label">Kaynak Para Birimi</label>
-                                        <select class="form-select" id="from-currency" style="background-color: rgb(236, 236, 236);" required>
-                                            <option selected value="USD">Amerikan Doları (USD)</option>
-                                            <option value="EUR">Euro (EUR)</option>
-                                            <option value="TRY">Türk Lirası (TRY)</option>
-                                        </select>
+                                       <select class="form-select" id="from-currency" style="background-color: rgb(236, 236, 236);" required></select>
                                     </div>
                                     <div class="mb-3">
                                         <label for="to-currency" class="form-label">Hedef Para Birimi</label>
-                                        <select class="form-select" id="to-currency" style="background-color: rgb(236, 236, 236);" required>
-                                            <option value="USD">Amerikan Doları (USD)</option>
-                                            <option value="EUR">Euro (EUR)</option>
-                                            <option selected value="TRY">Türk Lirası (TRY)</option>
-                                        </select>
+                                        <select class="form-select" id="to-currency" style="background-color: rgb(236, 236, 236);" required></select>
                                     </div>
                                 </div>
                                 <button id="submit-button" type="submit" class="btn btn-primary w-100">Hesapla</button>
@@ -63,95 +55,35 @@
 
             <div class = "col-lg-8">
                 <div class="card mt-4">
-                    <div class="card-header d-flex justify-content-between align-items-center"> 
-                        Güncel Döviz Kurları
-                        <!-- dinamik olarak eklenecek -->
-                        <div>
-                            <span class="last-update-text mr-2">Son güncelleme: 14:37:01</span>
-                            <button class="btn btn-sm btn-outline-secondary refresh-btn">
+                    <div class="card-header"> 
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h4 class="mb-0 fw-bold">Canlı Döviz Kurları</h4>
+                            <div style="width: 35%; display: flex; align-items: center; justify-content: between;">
+                            <label for="base-currency" class="base-currency mb-0 me-2">Baz para birimi:</label>
+                                <select class="form-select form-select-sm" id="base-currency" required>
+                                  <!-- Dinamik olarak buraya eklenecek --> 
+                                </select>
+                            </div>
+                        </div>
+                      
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <span id="last-update" class="last-update-text text-muted" >Son güncelleme: 15:30:17</span>
+                            <button id="refresh-btn" class="btn btn-sm btn-outline-secondary refresh-btn">
                                 <i class="fas fa-sync-alt"></i> Yenile
                             </button>
                         </div>
                     </div>
                     <div class="card-body">
                         <div class="row g-3 justify-content-flex-start flex-wrap-wrap">
-                            <div class="col-12 col-sm-6 col-md-4 mb-3">
-                                <div class="live-currency">
-                                    <span class="currency-flag">€</span>
-                                    <div class="currency-info">
-                                        <span class="currency-title">EUR</span>
-                                        <span class="currency-subtitle">Euro</span>
-                                    </div>
-                                    <div class="currency-value-group">
-                                        <span class="currency-value">0.0287</span>
-                                        <span class="currency-change text-danger"><i class="fas fa-arrow-down"></i> -0.15%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4 mb-3">
-                                <div class="live-currency">
-                                    <span class="currency-flag">$</span>
-                                    <div class="currency-info">
-                                        <span class="currency-title">USD</span>
-                                        <span class="currency-subtitle">Amerikan Doları</span>
-                                    </div>
-                                    <div class="currency-value-group">
-                                        <span class="currency-value">0.0329</span>
-                                        <span class="currency-change text-success"><i class="fas fa-arrow-up"></i> +0.10%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4 mb-3">
-                                <div class="live-currency">
-                                    <span class="currency-flag">₺</span>
-                                    <div class="currency-info">
-                                        <span class="currency-title">TRY</span>
-                                        <span class="currency-subtitle">Türk Lirası</span>
-                                    </div>
-                                    <div class="currency-value-group">
-                                        <span class="currency-value">1.00</span>
-                                        <span class="currency-change text-success"><i class="fas fa-arrow-up"></i> +0.05%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4 mb-3">
-                                <div class="live-currency">
-                                    <span class="currency-flag">£</span>
-                                    <div class="currency-info">
-                                        <span class="currency-title">GBP</span>
-                                        <span class="currency-subtitle">İngiliz Sterlini</span>
-                                    </div>
-                                    <div class="currency-value-group">
-                                        <span class="currency-value">0.0254</span>
-                                        <span class="currency-change text-danger"><i class="fas fa-arrow-down"></i> -0.20%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4 mb-3">
-                                <div class="live-currency">
-                                    <span class="currency-flag">¥</span>
-                                    <div class="currency-info">
-                                        <span class="currency-title">JPY</span>
-                                        <span class="currency-subtitle">Japon Yeni</span>
-                                    </div>
-                                    <div class="currency-value-group">
-                                        <span class="currency-value">0.0045</span>
-                                        <span class="currency-change text-success"><i class="fas fa-arrow-up"></i> +0.12%</span>
-                                    </div>
-                                </div>            
-                            </div>
-                            
+                            <div class="row g-3 justify-content-flex-start flex-wrap-wrap" id="live-currency-list">
+                                <!-- Dinamik olarak buraya eklenecek -->
+                            </div>                           
                         </div>
-                        
-                        
-                        
-
                     </div>
                 </div>
                 <div class="card mt-4 popular-rates">
                     <div class="card-header">
-                        Popüler Çapraz Kurlar
-                        <!-- dinamik olarak eklenecek -->
+                        Popüler Çapraz Kurlar             
                     </div>
                     <div class="card-body">
                         <table class="table table-hover mb-0 popular-cross-table">
@@ -163,26 +95,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>EUR/USD</td>
-                                    <td>0.0287</td>
-                                    <td class="text-right text-danger"><i class="fas fa-arrow-down"></i> -0.15%</td>
-                                </tr>
-                                <tr>
-                                    <td>USD/TRY</td>
-                                    <td>0.0329</td>
-                                    <td class="text-right text-success"><i class="fas fa-arrow-up"></i> +0.10%</td>
-                                </tr>
-                                <tr>
-                                    <td>TRY/USD</td>
-                                    <td>1.00</td>
-                                    <td class="text-right text-success"><i class="fas fa-arrow-up"></i> +0.05%</td>
-                                </tr>
-                                <tr>
-                                    <td>GBP/EUR</td>
-                                    <td>0.0254</td>
-                                    <td class="text-right text-danger"><i class="fas fa-arrow-down"></i> -0.20%</td>
-                                </tr>
+                                 <!-- dinamik olarak eklenecek -->
                             </tbody>
                             </thead>
                         </table>
@@ -191,9 +104,6 @@
             </div>
         </div>
     </div>
-
-
-
     <script src="currency.js"></script>
     <script src="app.js"></script>
 </body>
